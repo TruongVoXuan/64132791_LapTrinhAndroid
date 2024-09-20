@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         double tong = num1+ num2;
         //Xuất chuyển từ int sang string
         String chuoiXuat = "Tổng là:" + String.valueOf(tong);
-        Toast.makeText(this, "Ban vua cham vao toi", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, chuoiXuat, Toast.LENGTH_SHORT).show();
     }
 
 }
