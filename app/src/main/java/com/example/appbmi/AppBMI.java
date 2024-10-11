@@ -16,6 +16,8 @@ import com.example.helloworld.R;
 
 import org.w3c.dom.Text;
 
+import java.text.DecimalFormat;
+
 public class AppBMI extends AppCompatActivity {
     Button btnCalculate;
     EditText editText1, editText2;
@@ -52,8 +54,8 @@ public class AppBMI extends AppCompatActivity {
         fixChieucao = Chieucao / 100;
 
         BMI = Cannang/ (fixChieucao * fixChieucao);
-
-        textBMI = "BMI cua ban la : " + BMI;
+        DecimalFormat df = new DecimalFormat("#.##");
+        textBMI = "BMI cua ban la : " + df.format(BMI);
         result.setText(textBMI);
 
     }
