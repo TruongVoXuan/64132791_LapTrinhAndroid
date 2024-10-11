@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         textViewKetQua.setText(String.valueOf(KQ));
 
     }
+
 //
 //    public void SayHello(View v) {
 //        EditText soThuNhat = findViewById(R.id.edtNum1);

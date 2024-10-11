@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
             android:ems="10"
-            android:hint="@string/app_name"
+            android:hint="Can nang (kg)"
             android:inputType="numberDecimal"
             tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
             android:ems="10"
-            android:hint="@string/app_name"
+            android:hint="Chieu cao (cm)"
             android:inputType="numberDecimal"
             tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
