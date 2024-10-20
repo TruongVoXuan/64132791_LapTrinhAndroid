@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.listview"
+    namespace = "com.example.api_weather"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.listview"
+        applicationId = "com.example.api_weather"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -32,7 +32,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -40,5 +39,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-
+    implementation("com.android.volley:volley:1.2.1") // Sửa đổi từ compile thành implementation
+    implementation("androidx.recyclerview:recyclerview:1.2.1") // Cập nhật thư viện RecyclerView
+    implementation("com.squareup.picasso:picasso:2.71828")
 }
