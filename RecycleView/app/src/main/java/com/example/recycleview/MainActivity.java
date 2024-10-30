@@ -17,6 +17,22 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
     private static final int EDIT_SONG_REQUEST = 1;
     private RecyclerView recyclerView;
@@ -25,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText edtSongName, edtAuthorName, edtImageUrl;
     private Button btnAdd;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,18 +69,45 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("imageUrl", song.getImageUrl());
                 startActivityForResult(intent, EDIT_SONG_REQUEST);
             }
-        });
 
+            @Override
+            public void onDeleteClick(int position) {
+                // Show confirmation dialog before deleting
+                android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(MainActivity.this);
+                builder.setTitle("Delete Song");
+                builder.setMessage("Are you sure you want to delete this song?");
+                builder.setPositiveButton("Yes", (dialog, which) -> {
+                    songAdapter.removeItem(position);
+                    Toast.makeText(MainActivity.this, "Song deleted", Toast.LENGTH_SHORT).show();
+                });
+                builder.setNegativeButton("No", (dialog, which) -> dialog.dismiss());
+                builder.show();
+            }
+        });
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onClick(View v) {
-                String name = edtSongName.getText().toString();
-                String author = edtAuthorName.getText().toString();
-                String imageUrl = edtImageUrl.getText().toString();
+                String name = edtSongName.getText().toString().trim();
+                String author = edtAuthorName.getText().toString().trim();
+                String imageUrl = edtImageUrl.getText().toString().trim();
 
+                // Validate input
+                if (name.isEmpty() || author.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "Please fill in all required fields", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                // Add new song
                 songList.add(new Song(name, author, imageUrl));
                 songAdapter.notifyDataSetChanged();
+
+                // Clear input fields
+                edtSongName.setText("");
+                edtAuthorName.setText("");
+                edtImageUrl.setText("");
+
+                Toast.makeText(MainActivity.this, "Song added successfully", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -83,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
                 song.setAuthor(author);
                 song.setImageUrl(imageUrl);
                 songAdapter.notifyItemChanged(position);
+                Toast.makeText(this, "Song updated successfully", Toast.LENGTH_SHORT).show();
             }
         }
     }
