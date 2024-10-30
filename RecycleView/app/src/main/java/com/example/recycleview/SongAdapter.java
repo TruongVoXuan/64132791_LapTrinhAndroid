@@ -15,8 +15,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
+import com.squareup.picasso.OkHttp3Downloader;
 
 import java.util.List;
+
+import okhttp3.OkHttpClient;
 
 public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder> {
     private List<Song> songList;
@@ -50,10 +53,13 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
         holder.tvSongName.setText(song.getName());
         holder.tvAuthorName.setText(song.getAuthor());
 
-        // Load image with Picasso
+        // Load image with Picasso using OkHttp
         if (!TextUtils.isEmpty(song.getImageUrl())) {
-            Picasso.get()
-                    .load(song.getImageUrl())
+            OkHttpClient client = new OkHttpClient();
+            Picasso picasso = new Picasso.Builder(context)
+                    .downloader(new OkHttp3Downloader(client))
+                    .build();
+            picasso.load(song.getImageUrl())
                     .placeholder(R.drawable.default_image)
                     .error(R.drawable.default_image)
                     .into(holder.imgSong, new Callback() {
