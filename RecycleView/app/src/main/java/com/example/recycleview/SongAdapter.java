@@ -13,13 +13,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.squareup.picasso.Callback;
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.OkHttp3Downloader;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import java.util.List;
-
-import okhttp3.OkHttpClient;
 
 public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder> {
     private List<Song> songList;
@@ -28,7 +25,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
 
     public interface OnItemClickListener {
         void onItemClick(int position);
-        void onDeleteClick(int position); // Add this method for delete functionality
+        void onDeleteClick(int position);
     }
 
     public void setOnItemClickListener(OnItemClickListener listener) {
@@ -53,29 +50,8 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
         holder.tvSongName.setText(song.getName());
         holder.tvAuthorName.setText(song.getAuthor());
 
-        // Load image with Picasso using OkHttp
-        if (!TextUtils.isEmpty(song.getImageUrl())) {
-            OkHttpClient client = new OkHttpClient();
-            Picasso picasso = new Picasso.Builder(context)
-                    .downloader(new OkHttp3Downloader(client))
-                    .build();
-            picasso.load(song.getImageUrl())
-                    .placeholder(R.drawable.default_image)
-                    .error(R.drawable.default_image)
-                    .into(holder.imgSong, new Callback() {
-                        @Override
-                        public void onSuccess() {
-                            // Image loaded successfully
-                        }
-
-                        @Override
-                        public void onError(Exception e) {
-                            Toast.makeText(context, "Error loading image", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-        } else {
-            holder.imgSong.setImageResource(R.drawable.default_image);
-        }
+        // Sử dụng ảnh nội bộ từ imageResId
+        holder.imgSong.setImageResource(song.getImageResId());
     }
 
     @Override
@@ -104,27 +80,21 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
             imgSong = itemView.findViewById(R.id.imgSong);
             btnDelete = itemView.findViewById(R.id.btnDelete);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (listener != null) {
-                        int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION) {
-                            listener.onItemClick(position);
-                        }
+            itemView.setOnClickListener(v -> {
+                if (listener != null) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        listener.onItemClick(position);
                     }
                 }
             });
 
             // Set click listener for delete button
-            btnDelete.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (listener != null) {
-                        int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION) {
-                            listener.onDeleteClick(position);
-                        }
+            btnDelete.setOnClickListener(v -> {
+                if (listener != null) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        listener.onDeleteClick(position);
                     }
                 }
             });

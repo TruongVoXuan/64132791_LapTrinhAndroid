@@ -1,4 +1,5 @@
 package com.example.recycleview;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private SongAdapter songAdapter;
     private List<Song> songList;
-    private EditText edtSongName, edtAuthorName, edtImageUrl;
+    private EditText edtSongName, edtAuthorName;
     private Button btnAdd;
 
     @SuppressLint("MissingInflatedId")
@@ -30,29 +31,35 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         edtSongName = findViewById(R.id.edtSongName);
         edtAuthorName = findViewById(R.id.edtAuthorName);
-        edtImageUrl = findViewById(R.id.edtImageUrl);
         btnAdd = findViewById(R.id.btnAdd);
 
+        // Khởi tạo danh sách bài hát mẫu
         songList = new ArrayList<>();
+        songList.add(new Song("Song 1", "Author 1", R.drawable.image1));
+        songList.add(new Song("Song 2", "Author 2", R.drawable.image2));
+        songList.add(new Song("Song 3", "Author 3", R.drawable.image3));
+
         songAdapter = new SongAdapter(this, songList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(songAdapter);
 
+        // Phần còn lại của code trong onCreate không đổi
         songAdapter.setOnItemClickListener(new SongAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
+                // Xử lý khi click vào bài hát
                 Song song = songList.get(position);
                 Intent intent = new Intent(MainActivity.this, EditSongActivity.class);
                 intent.putExtra("position", position);
                 intent.putExtra("name", song.getName());
                 intent.putExtra("author", song.getAuthor());
-                intent.putExtra("imageUrl", song.getImageUrl());
+                intent.putExtra("imageResId", song.getImageResId());
                 startActivityForResult(intent, EDIT_SONG_REQUEST);
             }
 
             @Override
             public void onDeleteClick(int position) {
-                // Show confirmation dialog before deleting
+                // Xử lý khi click nút xóa
                 android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(MainActivity.this);
                 builder.setTitle("Delete Song");
                 builder.setMessage("Are you sure you want to delete this song?");
@@ -64,13 +71,13 @@ public class MainActivity extends AppCompatActivity {
                 builder.show();
             }
         });
+
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onClick(View v) {
                 String name = edtSongName.getText().toString().trim();
                 String author = edtAuthorName.getText().toString().trim();
-                String imageUrl = edtImageUrl.getText().toString().trim();
 
                 // Validate input
                 if (name.isEmpty() || author.isEmpty()) {
@@ -78,37 +85,19 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                // Add new song
-                songList.add(new Song(name, author, imageUrl));
+                // Add new song with a default image from resources
+                int defaultImageResId = R.drawable.default_image; // Use a drawable resource as default image
+                songList.add(new Song(name, author, defaultImageResId));
                 songAdapter.notifyDataSetChanged();
 
                 // Clear input fields
                 edtSongName.setText("");
                 edtAuthorName.setText("");
-                edtImageUrl.setText("");
 
                 Toast.makeText(MainActivity.this, "Song added successfully", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == EDIT_SONG_REQUEST && resultCode == RESULT_OK && data != null) {
-            int position = data.getIntExtra("position", -1);
-            if (position != -1) {
-                String name = data.getStringExtra("name");
-                String author = data.getStringExtra("author");
-                String imageUrl = data.getStringExtra("imageUrl");
-
-                Song song = songList.get(position);
-                song.setName(name);
-                song.setAuthor(author);
-                song.setImageUrl(imageUrl);
-                songAdapter.notifyItemChanged(position);
-                Toast.makeText(this, "Song updated successfully", Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
+    // Phần còn lại của MainActivity không đổi
 }

@@ -1,21 +1,27 @@
 package com.example.recycleview;
 
+import android.net.Uri;
 public class Song {
     private String name;
     private String author;
-    private String imageUrl;
+    private int imageResId; // ID tài nguyên nội bộ của ảnh
 
-    public Song(String name, String author, String imageUrl) {
+    public Song(String name, String author, int imageResId) {
         this.name = name;
         this.author = author;
-        this.imageUrl = imageUrl;
+        this.imageResId = imageResId;
     }
 
-    // Getters and setters
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-    public String getAuthor() { return author; }
-    public void setAuthor(String author) { this.author = author; }
-    public String getImageUrl() { return imageUrl; }
-    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
+    public String getName() {
+        return name;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public int getImageResId() {
+        return imageResId;
+    }
+
 }

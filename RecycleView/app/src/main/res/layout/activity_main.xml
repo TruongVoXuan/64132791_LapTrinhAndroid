@@ -4,16 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#f0f0f0">
 
-    <!-- Input fields container -->
+    <!-- Khung nhập thông tin bài hát -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@android:color/white"
         android:padding="16dp"
-        android:elevation="4dp">
+        android:elevation="4dp"
+        android:layout_marginBottom="16dp">
 
         <EditText
             android:id="@+id/edtSongName"
@@ -23,7 +25,7 @@
             android:inputType="text"
             android:padding="12dp"
             android:layout_marginBottom="8dp"
-            android:background="@android:drawable/editbox_background"/>
+            android:background="@android:drawable/editbox_background" />
 
         <EditText
             android:id="@+id/edtAuthorName"
@@ -33,36 +35,38 @@
             android:inputType="text"
             android:padding="12dp"
             android:layout_marginBottom="8dp"
-            android:background="@android:drawable/editbox_background"/>
+            android:background="@android:drawable/editbox_background" />
 
         <EditText
             android:id="@+id/edtImageUrl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Image URL"
-            android:inputType="textUri"
+            android:hint="Image File Name (in Pictures folder)"
+            android:inputType="text"
             android:padding="12dp"
             android:layout_marginBottom="8dp"
-            android:background="@android:drawable/editbox_background"/>
+            android:background="@android:drawable/editbox_background" />
 
         <Button
             android:id="@+id/btnAdd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Add Song"
+            android:backgroundTint="@color/purple_500"
             android:textColor="@android:color/white"
-            android:layout_marginTop="8dp"/>
+            android:padding="12dp"
+            android:layout_marginTop="8dp" />
 
     </LinearLayout>
 
-    <!-- RecyclerView for displaying songs -->
+    <!-- RecyclerView để hiển thị danh sách bài hát -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginTop="16dp"
         android:clipToPadding="false"
-        android:paddingBottom="8dp"/>
+        android:paddingBottom="8dp"
+        android:background="@android:color/white" />
 
 </LinearLayout>
