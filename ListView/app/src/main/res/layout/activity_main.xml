@@ -21,7 +21,7 @@
 
         <EditText
             android:id="@+id/edtThem"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
@@ -35,18 +35,22 @@
             android:text="Thêm" />
     </LinearLayout>
 
-    <ScrollView
+    <ListView
+        android:id="@+id/lv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:minHeight="100dp"
-        android:soundEffectsEnabled="false"
-        android:splitMotionEvents="false"
-        android:fillViewport="true">
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
-        <ListView
-            android:id="@+id/lv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </ScrollView>
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trở về màn hình chính"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+    android:backgroundTint="#00796B"
+    android:textColor="#FFFFFF"
+    android:padding="10dp"
+    android:drawablePadding="8dp" />
 
 </LinearLayout>
