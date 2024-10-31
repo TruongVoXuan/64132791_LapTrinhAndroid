@@ -1,24 +1,37 @@
 package truong.vx.thigk;
 
-import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+
+    Button buttonBMIApp, buttonProfile, buttonList, buttonRecycleList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        buttonBMIApp = findViewById(R.id.buttonBMIApp);
+        buttonProfile = findViewById(R.id.buttonProfile);
+        buttonList = findViewById(R.id.buttonList);
+        buttonRecycleList = findViewById(R.id.buttonRecycleList);
+
+        buttonBMIApp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Chuyển sang Activity BMIApp
+                startActivity(new Intent(MainActivity.this, BMI_Activity.class));
+            }
         });
+
+        
+
+
     }
 }
