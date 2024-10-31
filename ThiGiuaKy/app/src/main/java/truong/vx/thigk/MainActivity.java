@@ -30,7 +30,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        
+        buttonProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Chuyển sang Activity Profile
+                startActivity(new Intent(MainActivity.this, Profile_Activity.class));
+            }
+        });
 
 
     }
