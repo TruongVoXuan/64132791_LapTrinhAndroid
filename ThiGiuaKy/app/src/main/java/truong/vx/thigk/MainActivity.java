@@ -38,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        buttonList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Chuyển sang Activity List
+                startActivity(new Intent(MainActivity.this, List_Activity.class));
+            }
+        });
+
 
     }
 }
