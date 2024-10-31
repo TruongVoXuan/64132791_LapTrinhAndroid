@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ThiGK"
         tools:targetApi="31">
         <activity
+            android:name=".RecycleList_Activity"
+            android:exported="false" />
+        <activity
             android:name=".List_Activity"
             android:exported="false" />
         <activity

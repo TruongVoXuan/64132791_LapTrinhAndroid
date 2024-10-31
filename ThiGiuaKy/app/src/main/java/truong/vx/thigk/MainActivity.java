@@ -45,7 +45,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, List_Activity.class));
             }
         });
-
+        buttonRecycleList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Chuyển sang Activity RecycleList
+                startActivity(new Intent(MainActivity.this, RecycleList_Activity.class));
+            }
+        });
+    }
 
     }
-}
+

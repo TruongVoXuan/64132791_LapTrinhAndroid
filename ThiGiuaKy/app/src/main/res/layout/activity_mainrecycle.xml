@@ -26,6 +26,14 @@
             android:padding="12dp"
             android:layout_marginBottom="8dp"
             android:background="@android:drawable/editbox_background" />
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="8dp"
+            android:background="@android:color/white" />
 
         <EditText
             android:id="@+id/edtAuthorName"
