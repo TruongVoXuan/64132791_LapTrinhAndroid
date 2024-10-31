@@ -35,9 +35,9 @@ public class RecycleList_Activity extends AppCompatActivity {
 
         // Khởi tạo danh sách bài hát mẫu
         songList = new ArrayList<>();
-        songList.add(new Song("Song 1", "Author 1", R.drawable.image1));
-        songList.add(new Song("Song 2", "Author 2", R.drawable.image2));
-        songList.add(new Song("Song 3", "Author 3", R.drawable.image3));
+        songList.add(new Song("Hồn Ma Trong Đêm", "Tác Giả 1", R.drawable.halloween_avatar_background));
+        songList.add(new Song("Màn Đêm Lạnh Giá", "Tác Giả 2", R.drawable.halloween_avatar_background));
+        songList.add(new Song("Tiếng Gọi Từ Âm Phủ", "Tác Giả 3", R.drawable.halloween_avatar_background));
 
         // Thiết lập Adapter và LayoutManager cho RecyclerView
         songAdapter = new SongAdapter(this, songList);
@@ -45,12 +45,7 @@ public class RecycleList_Activity extends AppCompatActivity {
         recyclerView.setAdapter(songAdapter);
 
         // Xử lý sự kiện cho nút trở về
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish(); // Kết thúc Activity hiện tại và trở về Activity trước
-            }
-        });
+        backButton.setOnClickListener(v -> finish()); // Kết thúc Activity hiện tại và trở về Activity trước
 
         // Xử lý sự kiện khi nhấn vào một bài hát trong danh sách
         songAdapter.setOnItemClickListener(new SongAdapter.OnItemClickListener() {
@@ -69,42 +64,39 @@ public class RecycleList_Activity extends AppCompatActivity {
             @Override
             public void onDeleteClick(int position) {
                 // Xử lý khi click nút xóa
-                android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(RecycleList_Activity.this);
-                builder.setTitle("Delete Song");
-                builder.setMessage("Are you sure you want to delete this song?");
-                builder.setPositiveButton("Yes", (dialog, which) -> {
-                    songAdapter.removeItem(position);
-                    Toast.makeText(RecycleList_Activity.this, "Song deleted", Toast.LENGTH_SHORT).show();
-                });
-                builder.setNegativeButton("No", (dialog, which) -> dialog.dismiss());
-                builder.show();
+                new android.app.AlertDialog.Builder(RecycleList_Activity.this)
+                        .setTitle("Xóa Bài Hát")
+                        .setMessage("Bạn có chắc chắn muốn xóa bài hát này không?")
+                        .setPositiveButton("Có", (dialog, which) -> {
+                            songAdapter.removeItem(position);
+                            Toast.makeText(RecycleList_Activity.this, "Bài hát đã bị xóa", Toast.LENGTH_SHORT).show();
+                        })
+                        .setNegativeButton("Không", (dialog, which) -> dialog.dismiss())
+                        .show();
             }
         });
 
         // Xử lý sự kiện cho nút thêm bài hát
-        btnAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String name = edtSongName.getText().toString().trim();
-                String author = edtAuthorName.getText().toString().trim();
+        btnAdd.setOnClickListener(v -> {
+            String name = edtSongName.getText().toString().trim();
+            String author = edtAuthorName.getText().toString().trim();
 
-                // Kiểm tra đầu vào
-                if (name.isEmpty() || author.isEmpty()) {
-                    Toast.makeText(RecycleList_Activity.this, "Please fill in all required fields", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                // Thêm bài hát mới với một hình ảnh mặc định từ tài nguyên
-                int defaultImageResId = R.drawable.default_image; // Sử dụng tài nguyên drawable làm hình ảnh mặc định
-                songList.add(new Song(name, author, defaultImageResId));
-                songAdapter.notifyDataSetChanged(); // Cập nhật RecyclerView
-
-                // Xóa nội dung của các EditText
-                edtSongName.setText("");
-                edtAuthorName.setText("");
-
-                Toast.makeText(RecycleList_Activity.this, "Song added successfully", Toast.LENGTH_SHORT).show();
+            // Kiểm tra đầu vào
+            if (name.isEmpty() || author.isEmpty()) {
+                Toast.makeText(RecycleList_Activity.this, "Hãy điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                return;
             }
+
+            // Thêm bài hát mới với một hình ảnh mặc định từ tài nguyên
+            int defaultImageResId = R.drawable.spider_web; // Sử dụng tài nguyên drawable làm hình ảnh mặc định
+            songList.add(new Song(name, author, defaultImageResId));
+            songAdapter.notifyDataSetChanged(); // Cập nhật RecyclerView
+
+            // Xóa nội dung của các EditText
+            edtSongName.setText("");
+            edtAuthorName.setText("");
+
+            Toast.makeText(RecycleList_Activity.this, "Bài hát đã được thêm thành công", Toast.LENGTH_SHORT).show();
         });
     }
 
@@ -122,7 +114,7 @@ public class RecycleList_Activity extends AppCompatActivity {
                 Song updatedSong = new Song(name, author, imageResId);
                 songList.set(position, updatedSong);
                 songAdapter.notifyItemChanged(position);
-                Toast.makeText(this, "Song updated successfully", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Bài hát đã được cập nhật thành công", Toast.LENGTH_SHORT).show();
             }
         }
     }

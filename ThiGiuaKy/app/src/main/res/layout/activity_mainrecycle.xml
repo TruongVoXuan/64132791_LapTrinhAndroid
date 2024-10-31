@@ -5,14 +5,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#f0f0f0">
+    android:background="#2B2B2B">
 
     <!-- Khung nhập thông tin bài hát -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@android:color/white"
+        android:background="#FF6600"
         android:padding="16dp"
         android:elevation="4dp"
         android:layout_marginBottom="16dp">
@@ -21,50 +21,44 @@
             android:id="@+id/edtSongName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Song Name"
+            android:hint="Tên Bài Hát"
             android:inputType="text"
             android:padding="12dp"
             android:layout_marginBottom="8dp"
-            android:background="@android:drawable/editbox_background" />
-        <androidx.recyclerview.widget.RecyclerView
-
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:clipToPadding="false"
-            android:paddingBottom="8dp"
-            android:background="@android:color/white" />
+            android:background="@android:drawable/editbox_background"
+            android:textColor="#000000"/>
 
         <EditText
             android:id="@+id/edtAuthorName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Author Name"
+            android:hint="Tên Tác Giả"
             android:inputType="text"
             android:padding="12dp"
             android:layout_marginBottom="8dp"
-            android:background="@android:drawable/editbox_background" />
+            android:background="@android:drawable/editbox_background"
+            android:textColor="#000000"/>
 
         <EditText
             android:id="@+id/edtImageUrl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Image File Name (in Pictures folder)"
+            android:hint="Tên Tập Tin Hình Ảnh"
             android:inputType="text"
             android:padding="12dp"
             android:layout_marginBottom="8dp"
-            android:background="@android:drawable/editbox_background" />
+            android:background="@android:drawable/editbox_background"
+            android:textColor="#000000"/>
 
         <Button
             android:id="@+id/btnAdd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add Song"
-            android:backgroundTint="@color/purple_500"
-            android:textColor="@android:color/white"
+            android:text="Thêm Bài Hát"
+            android:backgroundTint="#FF3300"
+            android:textColor="#FFFFFF"
             android:padding="12dp"
             android:layout_marginTop="8dp" />
-
     </LinearLayout>
 
     <!-- RecyclerView để hiển thị danh sách bài hát -->
@@ -75,7 +69,7 @@
         android:layout_weight="1"
         android:clipToPadding="false"
         android:paddingBottom="8dp"
-        android:background="@android:color/white" />
+        android:background="#FF9900" />
     <Button
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
@@ -83,8 +77,13 @@
         android:text="Trở về màn hình chính"
         android:layout_marginTop="16dp"
         android:layout_marginLeft="85dp"
-        android:backgroundTint="#00796B"
-        android:textColor="#FFFFFF"
-        android:padding="10dp"
-        android:drawablePadding="8dp" />
+        android:backgroundTint="#AA0000"
+    android:textColor="#FFFFFF"
+    android:padding="10dp"
+    android:drawablePadding="8dp"
+    android:background="@drawable/button_halloween_bg"
+    android:textStyle="bold"
+    android:layout_gravity="center"
+    android:layout_marginBottom="16dp"
+    android:fontFamily="serif"/>
 </LinearLayout>

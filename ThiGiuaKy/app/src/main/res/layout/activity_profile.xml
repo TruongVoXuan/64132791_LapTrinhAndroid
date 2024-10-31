@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-
-    android:background="@drawable/background_gradient">
-
+    android:background="#292929">
 
     <!-- Bố cục hàng ngang cho ảnh đại diện và thông tin -->
     <LinearLayout
@@ -22,7 +21,11 @@
             android:layout_height="100dp"
             android:layout_marginEnd="16dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/avata" />
+            android:src="@drawable/avata"
+            android:background="@drawable/halloween_avatar_background"
+            android:contentDescription="Halloween Avatar"
+            android:elevation="8dp"
+            android:layout_marginTop="8dp" />
 
         <!-- Phần thông tin cá nhân bên phải -->
         <LinearLayout
@@ -36,46 +39,50 @@
                 android:id="@+id/nameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="VÕ XUÂN TRƯỜNG"
-                android:textSize="24sp"
+                android:text="🎃 VÕ XUÂN TRƯỜNG 🎃"
+                android:textSize="22sp"
                 android:textStyle="bold"
-                android:textColor="#000000" />
+                android:textColor="#FF9800"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="4" />
 
             <!-- Ngày sinh -->
             <TextView
                 android:id="@+id/birthdayTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ngày sinh: 25/01/2000"
+                android:text="🎃 Ngày sinh: 25/01/2000"
                 android:textSize="16sp"
-                android:textColor="#000000" />
+                android:textColor="#FFCC80" />
 
             <!-- Giới tính -->
             <TextView
                 android:id="@+id/genderTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Giới tính: Nam"
+                android:text="👻 Giới tính: Nam"
                 android:textSize="16sp"
-                android:textColor="#000000" />
+                android:textColor="#FFCC80" />
 
             <!-- Địa chỉ Email -->
             <TextView
                 android:id="@+id/emailTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Email: truong.vx@ntu.edu.vn"
+                android:text="📧 SĐT:0345338980"
                 android:textSize="16sp"
-                android:textColor="#000000" />
+                android:textColor="#FFCC80" />
 
             <!-- Địa chỉ -->
             <TextView
                 android:id="@+id/addressTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Địa chỉ: NhaTrang-KhánhHòa"
+                android:text="🏠 Địa chỉ: Nha Trang - Khánh Hòa"
                 android:textSize="16sp"
-                android:textColor="#000000" />
+                android:textColor="#FFCC80" />
         </LinearLayout>
     </LinearLayout>
 
@@ -85,8 +92,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="This is a short bio about yourself."
-        android:textSize="16sp" />
+        android:text="👻 Đây là một mô tả ngắn về bản thân bạn."
+        android:textSize="16sp"
+        android:textColor="#EEEEEE"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3" />
 
     <!-- Platform Icons (Facebook, YouTube, Gmail) -->
     <LinearLayout
@@ -103,7 +115,8 @@
             android:layout_height="40dp"
             android:src="@drawable/facebook"
             android:contentDescription="Facebook Icon"
-            android:layout_marginEnd="16dp" />
+            android:layout_marginEnd="16dp"
+            app:tint="#FF9800" />
 
         <ImageView
             android:id="@+id/icon_youtube"
@@ -111,25 +124,29 @@
             android:layout_height="40dp"
             android:src="@drawable/youtube"
             android:contentDescription="YouTube Icon"
-            android:layout_marginEnd="16dp" />
+            android:layout_marginEnd="16dp"
+            app:tint="#FF9800" />
 
         <ImageView
             android:id="@+id/icon_gmail"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/email"
-            android:contentDescription="Gmail Icon" />
-
+            android:contentDescription="Gmail Icon"
+            app:tint="#FF9800" />
     </LinearLayout>
+
+    <!-- Nút trở về màn hình chính -->
     <Button
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Trở về màn hình chính"
+        android:text="🔙 Trở về màn hình chính"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
-        android:layout_marginLeft="85dp"
-        android:backgroundTint="#00796B"
+        android:backgroundTint="#FF6D00"
         android:textColor="#FFFFFF"
-        android:padding="10dp"
-        android:drawablePadding="8dp" />
+        android:padding="12dp"
+        android:elevation="10dp"
+        android:textStyle="bold" />
 </LinearLayout>

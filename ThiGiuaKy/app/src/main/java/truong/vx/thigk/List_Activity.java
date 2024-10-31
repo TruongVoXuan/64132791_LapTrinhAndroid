@@ -1,5 +1,7 @@
 package truong.vx.thigk;
+
 import android.annotation.SuppressLint;
+import android.graphics.Color; // Thêm import này để sử dụng Color
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,17 +9,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
 import java.util.ArrayList;
 
 public class List_Activity extends AppCompatActivity {
@@ -25,54 +20,59 @@ public class List_Activity extends AppCompatActivity {
     ArrayAdapter<String> myAdapter;
     ListView lv;
     Button btnThem;
-    Button backButton; // Declare backButton here
+    Button backButton;
     EditText edtThem;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_list);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-
+        // Khởi tạo danh sách
         list = new ArrayList<>();
         list.add("Hỏi Thăm Nhau");
         list.add("Lá Xa Lìa Cành");
         list.add("Trách Ai Vô Tình");
-        list.add("Hỏi Vợ Ngoại Thành");
-        list.add("Nắng Ấm Xa Dần");
-        list.add("Lạc Trôi");
 
+        // Lấy các view từ layout
         lv = findViewById(R.id.lv);
         btnThem = findViewById(R.id.btnThem);
-        backButton = findViewById(R.id.backButton); // Initialize backButton
+        backButton = findViewById(R.id.backButton);
         edtThem = findViewById(R.id.edtThem);
-        myAdapter = new ArrayAdapter<>(List_Activity.this, android.R.layout.simple_list_item_1, list);
-        lv.setAdapter(myAdapter);
-        backButton.setOnClickListener(new View.OnClickListener() { // Xử lý sự kiện nút trở về
+
+        // Adapter tùy chỉnh để thay đổi màu chữ
+        myAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list) {
             @Override
-            public void onClick(View v) {
-                finish(); // Kết thúc Activity hiện tại và trở về Activity trước
+            public View getView(int position, View convertView, ViewGroup parent) {
+                // Sử dụng adapter gốc và thiết lập màu cam cho TextView
+                TextView item = (TextView) super.getView(position, convertView, parent);
+                item.setTextColor(Color.parseColor("#FFA500")); // Màu cam
+                return item;
             }
-        });
+        };
+
+        // Thiết lập adapter cho ListView
+        lv.setAdapter(myAdapter);
 
         btnThem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String tenBaiHat = edtThem.getText().toString();
-                if (!tenBaiHat.isEmpty()) { // Check if input is not empty
+                if (!tenBaiHat.isEmpty()) {
                     list.add(tenBaiHat);
                     myAdapter.notifyDataSetChanged();
-                    edtThem.setText(""); // Clear the input field after adding
+                    edtThem.setText(""); // Xóa nội dung EditText
                 } else {
                     Toast.makeText(getApplicationContext(), "Vui lòng nhập tên bài hát", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish(); // Kết thúc Activity hiện tại
             }
         });
 
@@ -82,6 +82,5 @@ public class List_Activity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), list.get(i), Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 }
