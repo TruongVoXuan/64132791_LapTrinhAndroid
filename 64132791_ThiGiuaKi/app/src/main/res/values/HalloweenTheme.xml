@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- styles.xml -->
+    <style name="HalloweenTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorPrimary">#8B0000</item>
+        <item name="colorAccent">#FF8C00</item>
+    </style>
+
+</resources>

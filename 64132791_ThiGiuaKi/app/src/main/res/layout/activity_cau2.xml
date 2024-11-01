@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="8dp"
+    android:paddingLeft="8dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="8dp"
+    android:background="#1E1B1B"
+    tools:context=".activityCau2">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#333333"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/edtThem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFA500"
+            android:hint="Thêm mục mới..."
+            android:padding="10dp"
+            android:inputType="text"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#BFBFBF" />
+
+        <Button
+            android:id="@+id/btnThem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="#FFA500"
+            android:textColor="#FFFFFF"
+            android:text="Thêm"
+            android:padding="12dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#2B2B2B"
+        android:divider="#FFA500"
+        android:dividerHeight="1dp"
+        android:padding="8dp" />
+
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔙 Trở về màn hình chính"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#FFA500"
+        android:textColor="#FFFFFF"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:elevation="8dp" />
+
+</LinearLayout>

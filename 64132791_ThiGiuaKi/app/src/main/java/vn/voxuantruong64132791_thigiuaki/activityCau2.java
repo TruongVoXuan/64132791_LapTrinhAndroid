@@ -1,4 +1,5 @@
-package truong.vx.thigk;
+package vn.voxuantruong64132791_thigiuaki;
+
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -19,7 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class List_Activity extends AppCompatActivity {
+public class activityCau2 extends AppCompatActivity {
     ArrayList<String> list;
     ArrayAdapter<String> myAdapter;
     ListView lv;
@@ -31,7 +32,7 @@ public class List_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list);
+        setContentView(R.layout.activity_cau2);
 
         // Khởi tạo danh sách
         list = new ArrayList<>();
@@ -91,7 +92,7 @@ public class List_Activity extends AppCompatActivity {
     }
 
     private void openItemActivity(String content) {
-        Intent intent = new Intent(this, ItemActivity1.class);
+        Intent intent = new Intent(this, ItemActivityList.class);
         intent.putExtra("content", content);
         startActivity(intent);
     }

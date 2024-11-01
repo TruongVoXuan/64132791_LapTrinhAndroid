@@ -10,22 +10,25 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ThiGK"
+        android:theme="@style/Theme._64132791_ThiGiuaKi"
         tools:targetApi="31">
         <activity
-            android:name=".ItemActivity1"
+            android:name=".ItemActivityList"
             android:exported="false" />
         <activity
-            android:name=".RecycleList_Activity"
+            android:name=".EditSongActivity"
             android:exported="false" />
         <activity
-            android:name=".List_Activity"
+            android:name=".activityCau4"
             android:exported="false" />
         <activity
-            android:name=".Profile_Activity"
+            android:name=".activityCau3"
             android:exported="false" />
         <activity
-            android:name=".BMI_Activity"
+            android:name=".activityCau2"
+            android:exported="false" />
+        <activity
+            android:name=".activityCau1"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

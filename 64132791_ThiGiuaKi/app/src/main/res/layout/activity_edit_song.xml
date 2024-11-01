@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/halloween_background"
+    android:theme="@style/HalloweenTheme">
+
+<EditText
+android:id="@+id/edtSongName"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:hint="Song Name"
+android:backgroundTint="#FF8C00"
+    android:textColor="#FF8C00"
+    android:textColorHint="#FFA500"
+    android:padding="12dp"
+    android:layout_marginBottom="16dp"
+    android:textStyle="bold" />
+
+<EditText
+android:id="@+id/edtAuthorName"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:hint="Author Name"
+android:backgroundTint="#FF8C00"
+android:textColor="#FF8C00"
+android:textColorHint="#FFA500"
+android:padding="12dp"
+android:layout_marginBottom="16dp"
+android:textStyle="bold" />
+
+<EditText
+android:id="@+id/edtImageUrl"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:hint="Image URL"
+android:backgroundTint="#FF8C00"
+android:textColor="#FF8C00"
+android:textColorHint="#FFA500"
+android:padding="12dp"
+android:layout_marginBottom="16dp"
+android:textStyle="bold" />
+
+<Button
+android:id="@+id/btnSave"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Save Changes"
+android:backgroundTint="#8B0000"
+    android:textColor="#FFFFFF"
+    android:layout_marginTop="16dp"
+    android:textStyle="bold" />
+
+    </LinearLayout>
