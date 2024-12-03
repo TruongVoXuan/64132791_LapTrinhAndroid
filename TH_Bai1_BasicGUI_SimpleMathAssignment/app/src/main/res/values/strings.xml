@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">TH_Bai1_BasicGUI_SimpleMathAssignment</string>
+
+    <string-array name="operations">
+        <item>Chọn phép tính</item>
+        <item>+</item>
+        <item>-</item>
+        <item>*</item>
+        <item>/</item>
+    </string-array>
 </resources>
