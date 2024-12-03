@@ -16,7 +16,49 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fad34f25-8e43-4e36-9fc2-051d5fc6bb2c" name="Changes" comment="" />
+    <list default="true" id="fad34f25-8e43-4e36-9fc2-051d5fc6bb2c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/androidTest/java/truong/vx/th_bai1_basicgui_simplemathassignment/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/java/truong/vx/th_bai1_basicgui_simplemathassignment/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/app/src/test/java/truong/vx/th_bai1_basicgui_simplemathassignment/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/gradle/libs.versions.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH_Bai1_BasicGUI_SimpleMathAssignment/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fragment/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fragment/.idea/gradle.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,9 +76,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2p3iCDy48UyamKYd43t4JMFV9ck" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -47,6 +89,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "android.gradle.sync.needed": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
@@ -69,6 +112,8 @@
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
+      <option name="RESTORE_ENABLED" value="false" />
+      <option name="RESTORE_FILE" value="" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
