@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
             weight = Double.parseDouble(weightEditText.getText().toString());
             bmi = weight / (height * height);
 
+
             // Phân loại BMI và cập nhật màu sắc, văn bản
             String bmiCategory;
             int color;
