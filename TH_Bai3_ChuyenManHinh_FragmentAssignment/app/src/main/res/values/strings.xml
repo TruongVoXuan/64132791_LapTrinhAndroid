@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TH_Bai3_ChuyenManHinh_FragmentAssignment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="left_arrow">Mũi tên trái</string>
+    <string name="right_arrow">Mũi tên phải</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
