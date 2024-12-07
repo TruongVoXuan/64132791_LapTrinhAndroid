@@ -1,6 +1,9 @@
 package truong.vx.th_bai3_chuyenmanhinh_fragmentassignment;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +23,27 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // Tìm nút btnTiengAnh và thêm sự kiện
+        Button btnTiengAnh = findViewById(R.id.btnTiengAnh);
+        btnTiengAnh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Chuyển sang TiengAnhActivity
+                Intent intent = new Intent(MainActivity.this, MainActivityTiengAnh.class);
+                startActivity(intent);
+            }
+        });
+
+
+        Button btnToan = findViewById(R.id.btnToan);
+        btnToan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Chuyển sang ToanActivity
+                Intent intent = new Intent(MainActivity.this, MainActivityToan.class);
+                startActivity(intent);
+            }
+        });
     }
-}
+    }

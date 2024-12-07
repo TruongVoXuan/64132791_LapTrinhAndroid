@@ -7,34 +7,69 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView7"
-        android:name="truong.vx.th_bai3_chuyenmanhinh_fragmentassignment.TiengAnh.BlankFragment_TiengAnh1"
-        android:layout_width="406dp"
-        android:layout_height="93dp"
-        app:layout_constraintEnd_toEndOf="parent"
+    <!-- Tiêu đề -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trắc nghiệm"
+
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView8"
-        android:name="truong.vx.th_bai3_chuyenmanhinh_fragmentassignment.TiengAnh.BlankFragmentTiengAnh3"
-        android:layout_width="414dp"
-        android:layout_height="92dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="67dp" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView11"
-        android:name="truong.vx.th_bai3_chuyenmanhinh_fragmentassignment.TiengAnh.BlankFragmentTiengAnh2"
-        android:layout_width="413dp"
-        android:layout_height="669dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginBottom="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/fragmentContainerView8"
-        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView7"
-        tools:layout_editor_absoluteX="0dp" />
+    <!-- Nút Tiếng Anh -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnTiengAnh"
+        android:layout_width="208dp"
+        android:layout_height="90dp"
+        android:textColor="@color/white"
+        android:text="Tiếng Anh"
+        android:background="@drawable/button_tienganh"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp" />
 
+    <!-- Nút Toán -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnToan"
+        android:layout_width="210dp"
+        android:layout_height="85dp"
+        android:background="@drawable/button_toan"
+        android:text="Toán"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/btnTiengAnh"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <!-- Nút Lập trình -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLapTrinh"
+        android:layout_width="215dp"
+        android:layout_height="89dp"
+        android:background="@drawable/button_style"
+        android:text="Lập trình"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/btnToan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <!-- TextView cuối -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HỌC VUI - VUI HỌC"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
