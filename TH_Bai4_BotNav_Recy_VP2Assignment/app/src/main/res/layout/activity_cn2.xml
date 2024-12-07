@@ -5,22 +5,23 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".CN2">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
-        android:name="truong.vx.th_bai4_botnav_recy_vp2assignment.BlankFragmentMain1"
-        android:layout_width="411dp"
-        android:layout_height="683dp"
+        android:id="@+id/fragmentContainerView3"
+        android:name="truong.vx.th_bai4_botnav_recy_vp2assignment.BlankFragmentCN2"
+        android:layout_width="414dp"
+        android:layout_height="561dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentContainerView4"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView2"
+        android:id="@+id/fragmentContainerView4"
         android:name="truong.vx.th_bai4_botnav_recy_vp2assignment.BlankFragmentMain2"
-        android:layout_width="409dp"
-        android:layout_height="146dp"
-        android:layout_marginTop="2dp"
+        android:layout_width="413dp"
+        android:layout_height="169dp"
+        android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView3"
+        tools:layout_editor_absoluteX="4dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

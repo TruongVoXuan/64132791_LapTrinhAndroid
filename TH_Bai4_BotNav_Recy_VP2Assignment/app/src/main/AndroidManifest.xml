@@ -13,6 +13,12 @@
         android:theme="@style/Theme.TH_Bai4_BotNav_Recy_VP2Assignment"
         tools:targetApi="31">
         <activity
+            android:name=".CN3"
+            android:exported="false" />
+        <activity
+            android:name=".CN2"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

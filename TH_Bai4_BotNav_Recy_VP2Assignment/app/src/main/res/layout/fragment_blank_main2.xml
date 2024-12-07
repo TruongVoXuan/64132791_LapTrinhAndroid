@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context="BlankFragmentMain2">
+
+    <!-- Button CN1 -->
+
+    <!-- Label CN1 -->
+
+    <!-- Button CN2 -->
+
+    <!-- Label CN2 -->
+
+    <ImageButton
+        android:id="@+id/cn1Btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_cn1"
+        android:scaleType="centerInside"
+        android:src="@drawable/iconcn1"
+        app:layout_constraintEnd_toStartOf="@id/cn2Btn"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/cn2Btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_cn2"
+        android:scaleType="centerInside"
+        android:src="@drawable/iconcn2"
+        app:layout_constraintEnd_toStartOf="@id/cn3Btn"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/cn1Btn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/cn4Btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_cn2"
+        android:scaleType="centerInside"
+        android:src="@drawable/iconcn4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/cn3Btn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cn4Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="CN4"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/cn4Btn"
+        app:layout_constraintHorizontal_bias="0.206"
+        app:layout_constraintStart_toStartOf="@id/cn4Btn"
+        app:layout_constraintTop_toBottomOf="@id/cn4Btn" />
+
+    <TextView
+        android:id="@+id/cn3Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="CN3"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/cn3Btn"
+        app:layout_constraintHorizontal_bias="0.241"
+        app:layout_constraintStart_toStartOf="@id/cn3Btn"
+        app:layout_constraintTop_toBottomOf="@id/cn3Btn" />
+
+    <TextView
+        android:id="@+id/cn1Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="CN1"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/cn1Btn"
+        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintStart_toStartOf="@id/cn1Btn"
+        app:layout_constraintTop_toBottomOf="@id/cn1Btn" />
+
+    <TextView
+        android:id="@+id/cn2Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="CN2"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/cn2Btn"
+        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintStart_toStartOf="@id/cn2Btn"
+        app:layout_constraintTop_toBottomOf="@id/cn2Btn" />
+
+    <ImageButton
+        android:id="@+id/cn3Btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_cn2"
+        android:scaleType="centerInside"
+        android:src="@drawable/iconcn3"
+        app:layout_constraintEnd_toStartOf="@id/cn4Btn"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/cn2Btn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Button CN3 -->
+
+    <!-- Label CN3 -->
+
+    <!-- Button CN4 -->
+
+    <!-- Label CN4 -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
