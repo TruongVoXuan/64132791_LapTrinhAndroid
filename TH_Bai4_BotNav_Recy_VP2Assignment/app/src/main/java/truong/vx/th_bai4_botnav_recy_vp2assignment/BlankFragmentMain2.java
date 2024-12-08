@@ -97,6 +97,16 @@ public class BlankFragmentMain2 extends Fragment {
             }
         });
 
+        ImageButton cn4Btn = view.findViewById(R.id.cn4Btn);
+        cn4Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Chuyển sang CN4Activity
+                Intent intent = new Intent(getActivity(), CN4.class);
+                startActivity(intent);
+            }
+        });
+
 
         return view;
     }

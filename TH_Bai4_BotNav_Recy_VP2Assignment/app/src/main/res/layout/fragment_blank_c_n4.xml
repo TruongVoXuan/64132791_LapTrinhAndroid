@@ -14,14 +14,13 @@
         android:layout_margin="16dp"
         app:cardCornerRadius="15dp"
         app:cardElevation="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/rectangle_bottom"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="233dp"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -42,7 +41,7 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/iconcn2" />
+                        android:src="@drawable/modem" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -60,7 +59,7 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/iconcn2" />
+                        android:src="@drawable/fix" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -78,7 +77,7 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/iconcn2" />
+                        android:src="@drawable/pay" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -104,7 +103,7 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/iconcn2" />
+                        android:src="@drawable/television" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -122,7 +121,7 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/iconcn2" />
+                        android:src="@drawable/docs" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -140,7 +139,7 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/iconcn2" />
+                        android:src="@drawable/shop" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -154,20 +153,134 @@
     <!-- Bảng dưới -->
     <androidx.cardview.widget.CardView
         android:id="@+id/rectangle_bottom"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_width="373dp"
+        android:layout_height="71dp"
         android:layout_margin="16dp"
         app:cardCornerRadius="15dp"
         app:cardElevation="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/rectangle_top"
+        app:layout_constraintTop_toBottomOf="@id/rectangle_top"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <View
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#FFFFFF"/>
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_wifi_2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/wifi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/text_wifi_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="WiFi"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/icon_wifi_2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+            <!-- Nhãn 20GHZ -->
+            <TextView
+                android:id="@+id/label_20ghz_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="20GHZ"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text_wifi_2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Nhãn 5GHZ -->
+            <TextView
+                android:id="@+id/label_5ghz_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="5GHZ"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/label_20ghz_2"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/icon_arrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/right_arrow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
     </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="373dp"
+        android:layout_height="120dp"
+        android:background="@drawable/bodercn4"
+        app:layout_constraintTop_toBottomOf="@id/rectangle_bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Icon WiFi -->
+        <ImageView
+            android:id="@+id/icon_wifi"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="24dp"
+            android:contentDescription="WiFi Icon"
+            android:src="@drawable/round"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Text WiFi -->
+        <TextView
+            android:id="@+id/text_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="FPT Telecom Wifi.."
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/icon_wifi" />
+
+        <!-- Text 20GHz -->
+        <TextView
+            android:id="@+id/label_20ghz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="99 Kết nối"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/text_wifi" />
+
+        <!-- Icon WiFi 5GHz -->
+        <ImageView
+            android:id="@+id/label_5ghz"
+            android:layout_width="31dp"
+            android:layout_height="23dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/wifi"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

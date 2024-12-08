@@ -10,18 +10,16 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView3"
         android:name="truong.vx.th_bai4_botnav_recy_vp2assignment.BlankFragmentCN2"
-        android:layout_width="414dp"
-        android:layout_height="561dp"
+        android:layout_width="417dp"
+        android:layout_height="589dp"
         app:layout_constraintBottom_toTopOf="@+id/fragmentContainerView4"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView4"
         android:name="truong.vx.th_bai4_botnav_recy_vp2assignment.BlankFragmentMain2"
-        android:layout_width="413dp"
-        android:layout_height="169dp"
-        android:layout_marginBottom="1dp"
+        android:layout_width="409dp"
+        android:layout_height="153dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView3"
-        tools:layout_editor_absoluteX="4dp" />
+        tools:layout_editor_absoluteX="1dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
