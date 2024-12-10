@@ -5,22 +5,21 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context=".MainActivity">
-
+    tools:context=".MainActivityResult">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
-        android:name="truong.vx.th_bai5_quizappgui.BlankFragmentMain"
-        android:layout_width="410dp"
-        android:layout_height="424dp"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView2"
-        android:name="truong.vx.th_bai5_quizappgui.BlankFragmentMainBtn"
+        android:id="@+id/fragmentContainerView8"
+        android:name="truong.vx.th_bai6_quizappfullcode.BlankFragmentResult1"
         android:layout_width="412dp"
-        android:layout_height="549dp"
+        android:layout_height="927dp" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView10"
+        android:name="truong.vx.th_bai6_quizappfullcode.BlankFragmentResult2"
+        android:layout_width="407dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="-4dp" />
+        tools:layout_editor_absoluteX="2dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

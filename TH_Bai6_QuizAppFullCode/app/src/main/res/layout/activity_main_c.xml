@@ -5,22 +5,19 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context=".MainActivity">
-
+    tools:context=".MainActivityC">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
-        android:name="truong.vx.th_bai5_quizappgui.BlankFragmentMain"
-        android:layout_width="410dp"
-        android:layout_height="424dp"
-        tools:layout_editor_absoluteX="0dp" />
+        android:id="@+id/fragmentContainerView3"
+        android:name="truong.vx.th_bai6_quizappfullcode.BlankFragmentC"
+        android:layout_width="413dp"
+        android:layout_height="478dp" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView2"
-        android:name="truong.vx.th_bai5_quizappgui.BlankFragmentMainBtn"
-        android:layout_width="412dp"
-        android:layout_height="549dp"
+        android:id="@+id/fragmentContainerView4"
+        android:name="truong.vx.th_bai6_quizappfullcode.BlankFragmentBody"
+        android:layout_width="413dp"
+        android:layout_height="623dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="-4dp" />
+        tools:layout_editor_absoluteX="0dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

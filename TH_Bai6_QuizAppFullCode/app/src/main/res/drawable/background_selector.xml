@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Khi hover (chọn câu trả lời) -->
+    <item android:state_pressed="true" android:drawable="@drawable/button_hover" />
+
+    <!-- Mặc định (không hover) -->
+    <item android:drawable="@drawable/button_default" />
+</selector>

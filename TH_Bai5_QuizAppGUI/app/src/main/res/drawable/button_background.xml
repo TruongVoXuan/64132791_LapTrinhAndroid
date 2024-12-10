@@ -1,14 +1,22 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Shadow Layer -->
+    <!-- Outer Shadow Layer -->
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="#80000000" /> <!-- Màu đen với opacity -->
-            <corners android:radius="8dp" />
+            <solid android:color="#60000000" /> <!-- Màu đen mờ hơn -->
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+
+    <!-- Mid Shadow Layer -->
+    <item android:top="3dp" android:bottom="3dp" android:left="3dp" android:right="3dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#40000000" /> <!-- Bóng gần hơn với độ mờ trung bình -->
+            <corners android:radius="10dp" />
         </shape>
     </item>
 
     <!-- Main Background Layer -->
-    <item android:top="2dp" android:bottom="2dp" android:left="2dp" android:right="2dp">
+    <item android:top="6dp" android:bottom="6dp" android:left="6dp" android:right="6dp">
         <shape android:shape="rectangle">
             <solid android:color="#FFF" />
             <corners android:radius="8dp" />

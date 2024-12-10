@@ -1,16 +1,13 @@
-package truong.vx.th_bai5_quizappgui;
+package truong.vx.th_bai6_quizappfullcode;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+
+import androidx.fragment.app.Fragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -96,8 +93,6 @@ public class BlankFragmentMainBtn extends Fragment {
                 startActivity(intent);
             }
         });
-
-
         return view; // Trả về View sau khi xử lý sự kiện
     }
 

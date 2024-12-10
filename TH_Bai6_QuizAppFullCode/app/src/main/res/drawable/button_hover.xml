@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#3DFF3D" /> <!-- Màu xanh lá cây khi hover -->
+    <corners android:radius="8dp"/> <!-- Góc bo tròn -->
+    <stroke android:color="#A5A5A5" android:width="2dp"/> <!-- Viền xám -->
+</shape>

@@ -10,13 +10,25 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TH_Bai5_QuizAppGUI"
+        android:theme="@style/Theme.TH_Bai6_QuizAppFullCode"
         tools:targetApi="31">
+
+        <!-- Main Activity -->
         <activity
-            android:name=".MainActivityResult"
-            android:exported="false" />
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Secondary Activities -->
         <activity
             android:name=".MainActivityPython"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivityResult"
             android:exported="false" />
         <activity
             android:name=".MainActivityJava"
@@ -24,15 +36,7 @@
         <activity
             android:name=".MainActivityC"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>
