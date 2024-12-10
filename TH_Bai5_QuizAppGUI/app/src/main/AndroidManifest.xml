@@ -13,6 +13,15 @@
         android:theme="@style/Theme.TH_Bai5_QuizAppGUI"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivityPython"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivityJava"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivityC"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
