@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#5D9BA4B2</color>
+    <color name="gray_transparent">#80A9A9A9</color> <!-- Xám trong suốt -->
+    <color name="gray_transparent_darker">#BFA9A9A9</color> <!-- Xám đậm hơn -->
+    <color name="red">#FF0000</color> <!-- Đỏ -->
+    <color name="semi_transparent_grey">#80A9A9A9</color>
+</resources>
